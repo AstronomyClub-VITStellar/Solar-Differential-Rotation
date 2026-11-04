@@ -137,10 +137,6 @@ plt.show()
 
 The output shows the full solar disk, limb-darkened toward the edge, with the grid running from −1000″ to +1000″. Several dark sunspot groups are visible: a large cluster in the upper-left of the disk, a leading spot with a trailing chain of smaller spots just below the centre line, and a few small spots near the right edge. Note the orientation: the latitude axis runs from −1000″ at the top to +1000″ at the bottom, so these raw HMI frames have solar north at the bottom and solar west on the left.
 
-![Figure 2](images/figure2_single_day_map.png)
-
-*Figure 2. Phase 1 result: SDO/HMI continuum image of 6 September 2017 with coordinate grid.*
-
 ---
 
 ## 6. Phase 2: multi-day sunspot tracking
@@ -202,12 +198,6 @@ for i, date_str in enumerate(base_dates):
 plt.tight_layout()
 plt.show()
 ```
-
-*Figure 3. Phase 2 code: loop over four dates and plot a 2 × 2 panel of HMI images.*
-
-![Figure 4](images/figure4_multi_day_panels.png)
-
-*Figure 4. Phase 2 result: HMI continuum images for 3, 5, 7 and 9 September 2017.*
 
 **Reading the panels.** On 3 September the principal groups lie close to the central meridian. By 5 September they have shifted toward the left of the frame, which is solar west in this orientation, and on 7 September they approach the west limb. By 9 September most have rotated out of view. Spots near the equator move noticeably farther between frames than spots at higher latitude, which is what the rotation fit quantifies. Measured over two days, the drift is about 28.6° for the equatorial group and about 24.4° for the group at 35° latitude.
 
@@ -282,9 +272,6 @@ plt.show()
 Fitted Equation: Omega(phi) = 14.41 + (-6.54) * sin^2(phi)
 ```
 
-![Figure 6](images/figure6_rotation_curve.png)
-
-*Figure 6. Phase 3 result: fitted equation and the solar differential rotation curve.*
 
 The program prints **Ω(φ) = 14.41 + (−6.54) · sin²(φ)**. The red points sit very close to the blue dashed model curve across the whole 5°–35° range. The warning messages in the original run are Python `SyntaxWarning` notices caused by the backslashes in the axis labels (`\phi` and `\Omega`); they do not affect the result and are removed by writing those strings as raw strings.
 
